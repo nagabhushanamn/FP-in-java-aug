@@ -3,6 +3,7 @@ package com.bank;
 import java.util.List;
 
 import com.bank.model.Txn;
+import com.bank.model.TxnType;
 import com.bank.repository.JdbcTxnRepository;
 import com.bank.repository.TxnRepository;
 import com.bank.service.TxnService;
@@ -24,7 +25,10 @@ public class App {
 //		txrService.txr("1", "2", 100.00);
 //		txrService.txr("3", "4", 200.00);
 
-		List<Txn> list = txnService.getTxns(5);
+		List<Txn> list = txnService.getTxns(200.00,TxnType.DEBIT);
+		for (Txn txn : list) {
+			System.out.println(txn);
+		}
 
 		// destroy
 		// ...

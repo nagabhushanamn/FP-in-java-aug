@@ -79,6 +79,18 @@ OO
    
    
    
+   Functional programming
+   
+   
+   why we need ?
+   
+   
+   
+    ==> we are able to write concise & expressive code
+    
+    ...
+   
+   
    
    
    

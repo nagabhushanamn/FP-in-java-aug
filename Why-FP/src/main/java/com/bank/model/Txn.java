@@ -17,11 +17,25 @@ public class Txn {
 		this.type = type;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public TxnType getType() {
+		return type;
+	}
+
 	@Override
 	public String toString() {
 		return "Txn [id=" + id + ", amount=" + amount + ", date=" + date + ", type=" + type + "]";
 	}
-	
-	
 
 }
