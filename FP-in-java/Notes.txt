@@ -59,6 +59,42 @@ by default in java-language,
 		 var =()->System.out.println("Ola..");   | Lambda Expression ==> function
 		    
 		    
+	------------------------------------------------
+	
+	
+	summary:
+	
+	==> to make function in java, we need lambda-expression
+	==> type of lambda-expression is 'FunctionalInterface'
+	==> java compiler will type inference on lambda parameters 
+	     & return type based on assignment context, maked code is clean
+	==> lambda expression can capture data from outside scope , if variable is local, it must be final
+	==> LE is not to replace Anonymous class ,
+	    but when we try to implement single method interfaces, prefer Lambda Expression	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		    
 		
 		

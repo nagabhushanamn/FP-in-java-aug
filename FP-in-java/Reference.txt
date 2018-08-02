@@ -205,8 +205,6 @@ FIs in the java 9 API
 				T get();
 			}	
 			
-	 	
-
 
 =================================================================================================
  2- Lambda Expressions
@@ -214,7 +212,8 @@ FIs in the java 9 API
 
     why lambdas?
 
-    ==> Enables Functional Programming ( is the way to wrote Function in java language )
+    ==> Enables Functional Programming 
+       ( is the way to wrote Function in java language )
     ==> Readable & concise code
     ==> Easier-to-use APIs and libraries
     ==> Enables support for parallel processing
@@ -257,6 +256,7 @@ aBlockOfCode=public void perform(){
 
  - HelloWorld Example
 
+
 -------------------------------------------------------------------------------------
 2.1 - Writing Your First Lambda Expression
 -------------------------------------------------------------------------------------	
@@ -283,15 +283,16 @@ Writing Your First Lambda Expression
 
 lambda Expression syntax:
 
-    - parameters  -> body    
+     parameters  -> body    
 
     parameters  
 
         (int a,int b)
         (a,b)
         (a)
-        ()
         a
+        ()
+        
 
     body 
 
@@ -304,7 +305,8 @@ lambda Expression syntax:
 2.2 - Typing Lambda Expressions	
 -------------------------------------------------------------------------------------
 
-What is type inference and how does it apply to lambda expressions? What are the legal contexts for a lambda expression?
+What is type inference and how does it apply to lambda expressions? 
+What are the legal contexts for a lambda expression?
 
 	- The compiler fills in missing types using type inference
 	- Type inference can derive parameter types for lambda expressions
@@ -329,7 +331,7 @@ Type Inference
 		
 	- code does not specify type parameter for 'getFirst'
 	- Still, no cast is needed in assignment
-	- Type parameter "String" is iferred from actual parameter "strarray" 
+	- Type parameter "String" is inferred from actual parameter "strarray" 
 
 -------------------------------------------------------------------------------------
 
@@ -360,6 +362,9 @@ Type Inference and Lambdas
 
 
    demo : LambdaInference.java     	
+        		
+        		
+        		
         		
 -------------------------------------------------------------------------------------
  2.3 - Capturing Values
@@ -393,7 +398,9 @@ What variables can lambda expressions access? Does every usage of a lambda expre
 	
 	- Capturing Local Variables
 		
-		- LE can access 	local variables of the enclosing method provided they are effectively final
+		- LE can access 	
+		
+		   local variables of the enclosing method provided they are effectively final
 		
 		How?
 		
@@ -413,6 +420,9 @@ What variables can lambda expressions access? Does every usage of a lambda expre
  		=> Anonymous classes can have state ( that is, fields )
  	
     demo - lambdaimplementation.java
+    
+    
+    
 -------------------------------------------------------------------------------------	
 2.4- Method References
 -------------------------------------------------------------------------------------	
