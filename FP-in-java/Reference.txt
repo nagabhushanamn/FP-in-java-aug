@@ -427,7 +427,8 @@ What variables can lambda expressions access? Does every usage of a lambda expre
 2.4- Method References
 -------------------------------------------------------------------------------------	
 
-What are method references? What are method references useful for?
+What are method references? 
+What are method references useful for?
 
 	- A method reference is an expression denoting a method
 	- Method references can be used in place of lambda expressions
@@ -444,7 +445,7 @@ Method References
     
 	    
 	    
-	    - static method ===> Employee::getmaxSalary
+	    - static method ===> Employee::getMaxSalary
 	    - Instance method, unspecified instance ===> Employee::getSalary
 	    - Instance method, specified instance ===> mike::getSalary
 	    - constructor                         ===> Employee::new
