@@ -695,7 +695,7 @@ Composing Functions:
 		
 		
 		
-	 - Objective : Get the initial leter of an Employee's name
+	 - Objective : Get the initial letter of an Employee's name
 	 
 
 		  	Function<Employee,String> getName=Employee::getName;
@@ -721,7 +721,7 @@ Composing Comparators:
 	
 			Comparator<Employee> byName=Comparator.comparing(Employee::getName)
 			Comparator<Employee> bySalary=Comparator.comparing(Employee::getSalary)
-			Comparator<Employee> byNameAndSalary=byName.comparingThen(bySalary);
+			Comparator<Employee> byNameAndSalary=byName.thenComparing(bySalary);
 
 ---------------------------------------------------------------------------------------			
 	
