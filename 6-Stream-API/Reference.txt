@@ -310,7 +310,7 @@ Note : intermediate operations return a new stream
 ---------------------------------------------------------------------------------------
 
 
-Correct way tp split a Stream pipeline
+Correct way to split a Stream pipeline
 
 Stream<Integer> fib=Stream.of(1,1,2,3);
 Stream<Integer> shortFib=fib.limit(2);
@@ -503,7 +503,7 @@ Filtering operations
 
     based on:
 
-        - content   : filter,takeWhile,dropWhile
+        - content   : filter ( from jdk 9, ==> takeWhile,dropWhile )
         - amount    : limit
         - Uniqueness: distinct
 
@@ -540,14 +540,14 @@ Example
     Stream<Integer> randoms=Stream.generate(random:nextInt);
 
     randoms.filter(n->n>0)
-           .distict()
+           .distinct()
            .limit(10)
            .forEach(System.out::println);
 
 
     randoms.filter(n->n>0)
            .limit(10)
-           .distict()
+           .distinct()
            .forEach(System.out::println); 
 
     randoms.distict()
@@ -563,7 +563,7 @@ Example
 about the distinct operation
 
     - one of the few stateful intermediate operations
-    - it does not operate independently on eact element
+    - it does not operate independently on each element
     - harder to Parallelise
 
 --------------------------------------------------------------------------------------- 
@@ -605,7 +605,7 @@ takeWhile Example
                   .forEach(System.out::println);
 
 
-    - stop as soon as th Predicate is false
+    - stop as soon as the Predicate is false
 
 
    --------------------------------------------------------------------------------------- 
@@ -615,7 +615,7 @@ takeWhile Example
 
 
     - No guarantee as to what elements will be taken/dropped
-    - Almost useless, but you may want to stlop a stream according to some external Condition; 
+    - Almost useless, but you may want to stop a stream according to some external Condition; 
 
 
         static volatile boolean keepGoing=true;
@@ -1341,7 +1341,8 @@ Pillars of Functional-style Programming
     Immutable Objects
 
     - All final fields
-    - All reference fields point to immutable objects, like string,integer, and so on 
+    - All reference fields point to immutable objects, l
+      ike string,integer, and so on 
 
 ---------------------------------------------------------------------------------------
 
@@ -1356,7 +1357,7 @@ Pillars of Functional-style Programming
 ---------------------------------------------------------------------------------------
 
 
-    Stateless Functions
+    Stateless/Pure Functions
 
         - do not modify fields of enclosing object(this)
         - do not modify static fields of enclosing class ( or other class )
@@ -1365,24 +1366,9 @@ Pillars of Functional-style Programming
 
            (ak.a) referential transparency 
 
-        in addition, pure function should have no side effects, so no I/O and no exceptions
+        in addition, pure function should have no side effects,
+        so no I/O and no exceptions
+        
+        
 
  ---------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------
-6.2  Using Parallel Streams              
----------------------------------------------------------------------------------------
-
-How do different stream sources and operations behave under parallel execution?
-
-    - Some data sources for parallel streams are more efficient than others
-    - Stateless operations are more efficient than stateful ones
-    - Most terminal operations support efficient parallelization
-
-
----------------------------------------------------------------------------------------
-
-
-
-

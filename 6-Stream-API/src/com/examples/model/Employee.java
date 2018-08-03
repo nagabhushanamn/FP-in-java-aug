@@ -61,24 +61,45 @@ public class Employee {
 	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
-	
-	
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result//----------------------------------------------
+				 + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", exp=" + exp + ", gender=" + gender
 				+ "]";
 	}
 
-
-
 	private static Random rand = new Random();
+
 	public static List<Employee> randomlyGenerate(int n) {
 		return Stream.generate(() -> {
-			int rn=rand.nextInt(100);
-			String name = "ibm-employee-"+rn;
-			return new Employee(rn,name,rn*1000.00,rn+1,Gender.MALE);
-		}).limit(n).collect(Collectors.toList());
+			int rn = rand.nextInt(100);
+			String name = "ibm-employee-" + rn;
+			return new Employee(rn, name, rn * 1000.00, rn + 1, Gender.MALE);
+		})
+		.limit(n).collect(Collectors.toList());
 	}
 
 }
